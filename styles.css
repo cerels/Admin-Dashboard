@@ -72,9 +72,11 @@ body {
 }
 .module img {
     filter: invert(96%) sepia(2%) saturate(1372%) hue-rotate(180deg) brightness(96%) contrast(96%);
-    height: 3vw;
-    width: auto;
+    height: auto;
+    width: 30px;
 }
+
+/* header */
 
 
 .header {
