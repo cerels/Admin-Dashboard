@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, system-ui, "Segoe UI", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template: 1fr 5fr / auto 4fr;
+  background-color: palegoldenrod;
+  grid-template-areas:
+    "dashboard header"
+    "dashboard content";
+}
+
+.dashboard {
+  background-color: #1992d4;
+  grid-area: dashboard;
+  display: subgrid;
+  padding: 20px;
+  
+}
+/* 
+.title {
+  background-color: red;
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  align-items: center;
+} */
+
+
+.title {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+  }
+
+.dashboard img {
+    object-fit: cover;
+    height: 5vh;
+    width: auto;
+}
+#textTitle {
+    font-weight: bold;
+    font-size: 30px;
+    color: #e2e8f0;
+  }
+
+.tab,
+.tabHelp {
+    padding-top: 50px;
+  display: grid;
+  gap: 20px;
+  color: #e2e8f0;
+  font-weight: bold;
+  font-size:large;
+  align-items: center;
+  
+}
+
+.module{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.module img {
+    filter: invert(96%) sepia(2%) saturate(1372%) hue-rotate(180deg) brightness(96%) contrast(96%);
+    height: 3vw;
+    width: auto;
+}
+
+
+.header {
+  background-color: blueviolet;
+  grid-area: header;
+}
+
+.content {
+  background-color: #e2e8f0;
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-areas:
+    "projects announcements"
+    "projects trending";
+  gap: 4px;
+  padding: 10px;
+}
+
+.projects {
+  background-color: aqua;
+  grid-area: projects;
+}
+
+.announcements {
+  background-color: aquamarine;
+  grid-area: announcements;
+}
+
+.trending {
+  background-color: red;
+  grid-area: trending;
+}
